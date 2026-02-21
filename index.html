@@ -1,56 +1,779 @@
-<!DOCTYPE HTML>
-<!--
-	Aerial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Craig Mutoko - Driving Success Through the Power of Technology</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<div id="wrapper">
-			<div id="bg"></div>
-			<div id="overlay"></div>
-			<div id="main">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Craig Mutoko - Freelance IT Consultant</title>
+	<meta name="description" content="Craig Mutoko - Freelance IT Consultant specializing in IT Consultancy & Advisory, Cloud Services, and Digital Transformation & Automation." />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+	<style>
+		*, *::before, *::after {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
 
-				<!-- Header -->
-					<header id="header">
-						<h1>Craig Mutoko</h1>
-						<p>IT Consultancy & Advisory &nbsp;&bull;&nbsp; Cloud Services &nbsp;&bull;&nbsp; Digital Transformation & Automation</p>
-						<nav>
-							<ul>
-								<li><a href="https://x.com/craigmutoko" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="https://uk.linkedin.com/in/craigmutoko" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								<li><a href="https://instagram.com/craigmutoko" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="hello@craigmutoko.co.uk" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-							</ul>
-						</nav>
-					</header>
+		html {
+			scroll-behavior: smooth;
+		}
 
-				<!-- Footer -->
-					<footer id="footer">
-				
-					</footer>
+		body {
+			font-family: 'Inter', sans-serif;
+			color: #1a1a2e;
+			line-height: 1.6;
+			background: #fff;
+		}
 
+		/* Navigation */
+		nav.topnav {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1000;
+			background: rgba(255, 255, 255, 0.95);
+			backdrop-filter: blur(10px);
+			border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+			padding: 0 2rem;
+			transition: box-shadow 0.3s;
+		}
+
+		nav.topnav.scrolled {
+			box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+		}
+
+		nav.topnav .nav-inner {
+			max-width: 1100px;
+			margin: 0 auto;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: 64px;
+		}
+
+		nav.topnav .logo {
+			font-weight: 700;
+			font-size: 1.2rem;
+			color: #1a1a2e;
+			text-decoration: none;
+		}
+
+		nav.topnav .nav-links {
+			list-style: none;
+			display: flex;
+			gap: 2rem;
+		}
+
+		nav.topnav .nav-links a {
+			text-decoration: none;
+			color: #555;
+			font-size: 0.9rem;
+			font-weight: 500;
+			transition: color 0.2s;
+		}
+
+		nav.topnav .nav-links a:hover {
+			color: #2563eb;
+		}
+
+		.menu-toggle {
+			display: none;
+			background: none;
+			border: none;
+			cursor: pointer;
+			padding: 0.5rem;
+		}
+
+		.menu-toggle span {
+			display: block;
+			width: 24px;
+			height: 2px;
+			background: #1a1a2e;
+			margin: 6px 0;
+			transition: all 0.3s;
+		}
+
+		/* Hero Section */
+		.hero {
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			padding: 6rem 2rem 4rem;
+			background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #2563eb 100%);
+			color: #fff;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.hero::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+			opacity: 1;
+		}
+
+		.hero-content {
+			position: relative;
+			z-index: 1;
+			max-width: 700px;
+		}
+
+		.hero h1 {
+			font-size: 3.5rem;
+			font-weight: 700;
+			letter-spacing: -0.02em;
+			line-height: 1.1;
+			margin-bottom: 1rem;
+		}
+
+		.hero .tagline {
+			font-size: 1.25rem;
+			font-weight: 300;
+			opacity: 0.9;
+			margin-bottom: 2rem;
+			line-height: 1.5;
+		}
+
+		.hero .cta-buttons {
+			display: flex;
+			gap: 1rem;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		.btn {
+			display: inline-block;
+			padding: 0.8rem 2rem;
+			border-radius: 6px;
+			font-size: 0.95rem;
+			font-weight: 500;
+			text-decoration: none;
+			transition: all 0.2s;
+			cursor: pointer;
+			border: none;
+		}
+
+		.btn-primary {
+			background: #fff;
+			color: #1a1a2e;
+		}
+
+		.btn-primary:hover {
+			background: #e2e8f0;
+			transform: translateY(-1px);
+		}
+
+		.btn-outline {
+			background: transparent;
+			color: #fff;
+			border: 1px solid rgba(255, 255, 255, 0.4);
+		}
+
+		.btn-outline:hover {
+			border-color: #fff;
+			background: rgba(255, 255, 255, 0.1);
+			transform: translateY(-1px);
+		}
+
+		/* Section Styles */
+		section {
+			padding: 5rem 2rem;
+		}
+
+		.section-inner {
+			max-width: 1100px;
+			margin: 0 auto;
+		}
+
+		.section-title {
+			font-size: 2rem;
+			font-weight: 700;
+			margin-bottom: 1rem;
+			letter-spacing: -0.02em;
+		}
+
+		.section-subtitle {
+			color: #64748b;
+			font-size: 1.05rem;
+			margin-bottom: 3rem;
+			max-width: 600px;
+		}
+
+		/* About Section */
+		#about {
+			background: #f8fafc;
+		}
+
+		.about-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 4rem;
+			align-items: center;
+		}
+
+		.about-text p {
+			color: #475569;
+			margin-bottom: 1.25rem;
+			font-size: 1.02rem;
+		}
+
+		.about-highlights {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1.5rem;
+		}
+
+		.highlight-item {
+			background: #fff;
+			padding: 1.5rem;
+			border-radius: 10px;
+			border: 1px solid #e2e8f0;
+		}
+
+		.highlight-item .number {
+			font-size: 2rem;
+			font-weight: 700;
+			color: #2563eb;
+			line-height: 1;
+			margin-bottom: 0.25rem;
+		}
+
+		.highlight-item .label {
+			font-size: 0.85rem;
+			color: #64748b;
+			font-weight: 500;
+		}
+
+		/* Services Section */
+		#services {
+			background: #fff;
+		}
+
+		.services-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 2rem;
+		}
+
+		.service-card {
+			padding: 2rem;
+			border-radius: 12px;
+			border: 1px solid #e2e8f0;
+			transition: all 0.3s;
+			background: #fff;
+		}
+
+		.service-card:hover {
+			border-color: #2563eb;
+			box-shadow: 0 4px 24px rgba(37, 99, 235, 0.1);
+			transform: translateY(-2px);
+		}
+
+		.service-card .icon {
+			width: 48px;
+			height: 48px;
+			background: #eff6ff;
+			border-radius: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 1.25rem;
+			color: #2563eb;
+			font-size: 1.25rem;
+		}
+
+		.service-card h3 {
+			font-size: 1.15rem;
+			font-weight: 600;
+			margin-bottom: 0.75rem;
+		}
+
+		.service-card p {
+			color: #64748b;
+			font-size: 0.92rem;
+			line-height: 1.6;
+		}
+
+		/* Process Section */
+		#process {
+			background: #f8fafc;
+		}
+
+		.process-steps {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 2rem;
+		}
+
+		.process-step {
+			text-align: center;
+			padding: 1.5rem 1rem;
+		}
+
+		.step-number {
+			width: 44px;
+			height: 44px;
+			background: #2563eb;
+			color: #fff;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 700;
+			font-size: 1.1rem;
+			margin: 0 auto 1rem;
+		}
+
+		.process-step h3 {
+			font-size: 1.05rem;
+			font-weight: 600;
+			margin-bottom: 0.5rem;
+		}
+
+		.process-step p {
+			font-size: 0.88rem;
+			color: #64748b;
+			line-height: 1.5;
+		}
+
+		/* Contact Section */
+		#contact {
+			background: #fff;
+		}
+
+		.contact-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 4rem;
+		}
+
+		.contact-info p {
+			color: #475569;
+			margin-bottom: 1.5rem;
+			font-size: 1.02rem;
+		}
+
+		.contact-detail {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			margin-bottom: 1.25rem;
+		}
+
+		.contact-detail .icon {
+			width: 40px;
+			height: 40px;
+			background: #eff6ff;
+			border-radius: 8px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #2563eb;
+			font-size: 0.9rem;
+			flex-shrink: 0;
+		}
+
+		.contact-detail span {
+			color: #334155;
+			font-size: 0.95rem;
+		}
+
+		.contact-detail a {
+			color: #2563eb;
+			text-decoration: none;
+		}
+
+		.contact-detail a:hover {
+			text-decoration: underline;
+		}
+
+		.social-links {
+			display: flex;
+			gap: 0.75rem;
+			margin-top: 2rem;
+		}
+
+		.social-links a {
+			width: 40px;
+			height: 40px;
+			border-radius: 8px;
+			border: 1px solid #e2e8f0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #475569;
+			text-decoration: none;
+			transition: all 0.2s;
+			font-size: 1rem;
+		}
+
+		.social-links a:hover {
+			border-color: #2563eb;
+			color: #2563eb;
+			background: #eff6ff;
+		}
+
+		.contact-form {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+		}
+
+		.form-row {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1rem;
+		}
+
+		.contact-form input,
+		.contact-form textarea {
+			width: 100%;
+			padding: 0.8rem 1rem;
+			border: 1px solid #e2e8f0;
+			border-radius: 8px;
+			font-family: 'Inter', sans-serif;
+			font-size: 0.92rem;
+			color: #1a1a2e;
+			transition: border-color 0.2s;
+			background: #f8fafc;
+		}
+
+		.contact-form input:focus,
+		.contact-form textarea:focus {
+			outline: none;
+			border-color: #2563eb;
+			background: #fff;
+		}
+
+		.contact-form textarea {
+			resize: vertical;
+			min-height: 120px;
+		}
+
+		.btn-submit {
+			background: #2563eb;
+			color: #fff;
+			font-family: 'Inter', sans-serif;
+		}
+
+		.btn-submit:hover {
+			background: #1d4ed8;
+			transform: translateY(-1px);
+		}
+
+		/* Footer */
+		footer.site-footer {
+			background: #0f172a;
+			color: #94a3b8;
+			padding: 3rem 2rem;
+			text-align: center;
+		}
+
+		footer.site-footer .footer-inner {
+			max-width: 1100px;
+			margin: 0 auto;
+		}
+
+		footer.site-footer p {
+			font-size: 0.85rem;
+		}
+
+		footer.site-footer a {
+			color: #cbd5e1;
+			text-decoration: none;
+		}
+
+		footer.site-footer a:hover {
+			color: #fff;
+		}
+
+		/* Responsive */
+		@media screen and (max-width: 900px) {
+			.hero h1 {
+				font-size: 2.5rem;
+			}
+
+			.about-grid,
+			.contact-grid {
+				grid-template-columns: 1fr;
+				gap: 2.5rem;
+			}
+
+			.services-grid {
+				grid-template-columns: 1fr 1fr;
+			}
+
+			.process-steps {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+
+		@media screen and (max-width: 640px) {
+			.hero h1 {
+				font-size: 2rem;
+			}
+
+			.hero .tagline {
+				font-size: 1.05rem;
+			}
+
+			section {
+				padding: 3.5rem 1.25rem;
+			}
+
+			.services-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.process-steps {
+				grid-template-columns: 1fr;
+			}
+
+			.about-highlights {
+				grid-template-columns: 1fr 1fr;
+			}
+
+			.form-row {
+				grid-template-columns: 1fr;
+			}
+
+			nav.topnav .nav-links {
+				display: none;
+				position: absolute;
+				top: 64px;
+				left: 0;
+				right: 0;
+				background: rgba(255, 255, 255, 0.98);
+				flex-direction: column;
+				padding: 1rem 2rem 1.5rem;
+				gap: 0;
+				border-bottom: 1px solid #e2e8f0;
+			}
+
+			nav.topnav .nav-links.open {
+				display: flex;
+			}
+
+			nav.topnav .nav-links li {
+				padding: 0.6rem 0;
+			}
+
+			.menu-toggle {
+				display: block;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Navigation -->
+	<nav class="topnav" id="topnav">
+		<div class="nav-inner">
+			<a href="#" class="logo">Craig Mutoko</a>
+			<ul class="nav-links" id="navLinks">
+				<li><a href="#about">About</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#process">Process</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+			<button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<section class="hero" id="hero">
+		<div class="hero-content">
+			<h1>Driving Success Through the Power of Technology</h1>
+			<p class="tagline">Freelance IT Consultant helping businesses leverage cloud services, digital transformation, and automation to achieve their goals.</p>
+			<div class="cta-buttons">
+				<a href="#contact" class="btn btn-primary">Get in Touch</a>
+				<a href="#services" class="btn btn-outline">View Services</a>
 			</div>
 		</div>
-		<script>
-			window.onload = function() { document.body.classList.remove('is-preload'); }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
-	</body>
+	</section>
 
+	<!-- About Section -->
+	<section id="about">
+		<div class="section-inner">
+			<div class="about-grid">
+				<div class="about-text">
+					<h2 class="section-title">About Me</h2>
+					<p class="section-subtitle">Experienced IT consultant with a passion for solving complex technology challenges.</p>
+					<p>I work with businesses of all sizes to modernise their IT infrastructure, streamline operations, and unlock new opportunities through technology. Whether you're looking to migrate to the cloud, automate manual processes, or need strategic IT advice, I provide practical, results-driven solutions tailored to your needs.</p>
+					<p>With deep expertise across cloud platforms, enterprise systems, and digital strategy, I act as a trusted advisor to help you make the right technology decisions -- so you can focus on growing your business.</p>
+				</div>
+				<div class="about-highlights">
+					<div class="highlight-item">
+						<div class="number">10+</div>
+						<div class="label">Years Experience</div>
+					</div>
+					<div class="highlight-item">
+						<div class="number">50+</div>
+						<div class="label">Projects Delivered</div>
+					</div>
+					<div class="highlight-item">
+						<div class="number">30+</div>
+						<div class="label">Happy Clients</div>
+					</div>
+					<div class="highlight-item">
+						<div class="number">100%</div>
+						<div class="label">Commitment</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Services Section -->
+	<section id="services">
+		<div class="section-inner">
+			<h2 class="section-title">Services</h2>
+			<p class="section-subtitle">Comprehensive IT solutions to help your business thrive in the digital age.</p>
+			<div class="services-grid">
+				<div class="service-card">
+					<div class="icon"><i class="fas fa-comments"></i></div>
+					<h3>IT Consultancy &amp; Advisory</h3>
+					<p>Strategic technology guidance to align your IT investments with business objectives. From IT audits and roadmaps to vendor selection and project oversight.</p>
+				</div>
+				<div class="service-card">
+					<div class="icon"><i class="fas fa-cloud"></i></div>
+					<h3>Cloud Services</h3>
+					<p>End-to-end cloud solutions including migration planning, architecture design, and ongoing optimisation across AWS, Azure, and Google Cloud platforms.</p>
+				</div>
+				<div class="service-card">
+					<div class="icon"><i class="fas fa-cogs"></i></div>
+					<h3>Digital Transformation</h3>
+					<p>Modernise your business processes with automation, workflow optimisation, and digital tools that improve efficiency and reduce operational costs.</p>
+				</div>
+				<div class="service-card">
+					<div class="icon"><i class="fas fa-shield-alt"></i></div>
+					<h3>Cybersecurity</h3>
+					<p>Protect your business with security assessments, policy development, and implementation of best practices to safeguard your data and systems.</p>
+				</div>
+				<div class="service-card">
+					<div class="icon"><i class="fas fa-project-diagram"></i></div>
+					<h3>IT Project Management</h3>
+					<p>Expert management of technology projects from inception to delivery, ensuring they are completed on time, within scope, and on budget.</p>
+				</div>
+				<div class="service-card">
+					<div class="icon"><i class="fas fa-network-wired"></i></div>
+					<h3>Infrastructure &amp; Networking</h3>
+					<p>Design and implementation of robust, scalable IT infrastructure and network solutions tailored to your business requirements.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Process Section -->
+	<section id="process">
+		<div class="section-inner">
+			<h2 class="section-title">How I Work</h2>
+			<p class="section-subtitle">A straightforward approach to delivering results.</p>
+			<div class="process-steps">
+				<div class="process-step">
+					<div class="step-number">1</div>
+					<h3>Discovery</h3>
+					<p>Understanding your business, goals, and current technology landscape through in-depth consultation.</p>
+				</div>
+				<div class="process-step">
+					<div class="step-number">2</div>
+					<h3>Strategy</h3>
+					<p>Developing a clear, actionable plan with defined milestones and measurable outcomes.</p>
+				</div>
+				<div class="process-step">
+					<div class="step-number">3</div>
+					<h3>Implementation</h3>
+					<p>Executing the plan with minimal disruption to your operations, keeping you informed at every stage.</p>
+				</div>
+				<div class="process-step">
+					<div class="step-number">4</div>
+					<h3>Support</h3>
+					<p>Ongoing guidance and support to ensure lasting success and continuous improvement.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Section -->
+	<section id="contact">
+		<div class="section-inner">
+			<h2 class="section-title">Get in Touch</h2>
+			<p class="section-subtitle">Ready to discuss your next project? I'd love to hear from you.</p>
+			<div class="contact-grid">
+				<div class="contact-info">
+					<p>Whether you have a specific project in mind or need general IT advice, feel free to reach out. I'm always happy to have a no-obligation conversation about how I can help your business.</p>
+					<div class="contact-detail">
+						<div class="icon"><i class="fas fa-envelope"></i></div>
+						<span><a href="mailto:hello@craigmutoko.co.uk">hello@craigmutoko.co.uk</a></span>
+					</div>
+					<div class="contact-detail">
+						<div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+						<span>United Kingdom</span>
+					</div>
+					<div class="social-links">
+						<a href="https://x.com/craigmutoko" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+						<a href="https://uk.linkedin.com/in/craigmutoko" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+						<a href="https://instagram.com/craigmutoko" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+					</div>
+				</div>
+				<form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+					<input type="hidden" name="form-name" value="contact" />
+					<p style="display:none"><input name="bot-field" /></p>
+					<div class="form-row">
+						<input type="text" name="name" placeholder="Your Name" required />
+						<input type="email" name="email" placeholder="Your Email" required />
+					</div>
+					<input type="text" name="subject" placeholder="Subject" />
+					<textarea name="message" placeholder="Tell me about your project..." required></textarea>
+					<button type="submit" class="btn btn-submit">Send Message</button>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="site-footer">
+		<div class="footer-inner">
+			<p>&copy; 2025 Craig Mutoko. All rights reserved.</p>
+		</div>
+	</footer>
+
+	<script>
+		// Navbar scroll effect
+		window.addEventListener('scroll', function() {
+			var nav = document.getElementById('topnav');
+			if (window.scrollY > 10) {
+				nav.classList.add('scrolled');
+			} else {
+				nav.classList.remove('scrolled');
+			}
+		});
+
+		// Mobile menu toggle
+		document.getElementById('menuToggle').addEventListener('click', function() {
+			document.getElementById('navLinks').classList.toggle('open');
+		});
+
+		// Close mobile menu on link click
+		document.querySelectorAll('#navLinks a').forEach(function(link) {
+			link.addEventListener('click', function() {
+				document.getElementById('navLinks').classList.remove('open');
+			});
+		});
+	</script>
+
+</body>
 </html>
-
-
-
-
-
-
