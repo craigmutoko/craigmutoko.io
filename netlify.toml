@@ -1,0 +1,12 @@
+# Send all traffic on the bare domain to the www domain
+[[redirects]]
+  from = "https://craigmutoko.co.uk/*"
+  to = "https://www.craigmutoko.co.uk/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://craigmutoko.co.uk/*"
+  to = "https://www.craigmutoko.co.uk/:splat"
+  status = 301
+  force = true
